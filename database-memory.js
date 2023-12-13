@@ -3,7 +3,22 @@ export class DatabaseMemory{
 #musicas = new Map()
 
 list(){
-    return this.#livros.values()
+    return Array.from(this.#musicas.entries()).map((musicaArray) => {
+        const id = musicaArray[0]
+        const data = musicaArray[1]
+
+        return{
+            id,
+             ...data,
+    }
+    }) 
+
+    .filter(musica => {
+        if (search) {
+            return musica.titulo.includes(search)
+        }
+        return true
+    })
 }
 
 create(musica){
