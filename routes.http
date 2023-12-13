@@ -1,31 +1,36 @@
-POST http://localhost:3333/musicas
-Contente-Type: application/json
+//cadastra
+POST http://localhost:3333/musica
+Content-Type: application/json
 
 {
     "titulo": "Karma",
     "artista": "Taylor Swift",
-    "ano_lancamento": 2020,
+    "anolancamento": 2020
 }
 
 ###
 
-GET http://localhost:3333/musicas?search=cardigan 
+//aparece o cadastro
+GET http://localhost:3333/musica
 
 ###
 
-GET http://localhost:3333/musicas
+//pesquisa
+GET http://localhost:3333/musica?search=cardigan 
 
 ###
 
-PUT  http://localhost:3333/musicas/
-Contente-Type: application/json
+//atualizar
+PUT  http://localhost:3333/musica/
+Content-Type: application/json
 
 {
     "titulo": "cardigan",
     "artista": "Taylor Swift",
-    "ano_lancamento": 2020,
+    "anolancamento": 2020
 }
 
 ###
 
-DELETE http://localhost:3333/musicas/
+//deleta
+DELETE http://localhost:3333/musica/

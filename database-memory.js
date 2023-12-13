@@ -27,7 +27,7 @@ create(musica){
 }
 
 update(musica){
-    this.#musicas.push(musica) 
+    this.#musicas.set(id, musica) 
 }
 
 delete(musica){
